@@ -1,0 +1,487 @@
+/* ****************************** */
+/* ---------- GENERAL ----------- */
+/* ****************************** */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* height: 100vh; */
+  background-color: #e0e5ec;
+  color: #333;
+}
+
+h1 {
+  padding: 2rem;
+}
+
+h2 {
+  font-weight: 400;
+  letter-spacing: 1.2rem;
+  font-size: 2.2rem;
+}
+
+/* *************************** */
+/* ---------- HEADER --------- */
+/* *************************** */
+
+.vp-content {
+  min-width: 100%;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.9rem;
+  min-height: 100vh;
+  background: url(./img/slider1.jpg) center center/cover;
+  box-shadow: 0 0 4px rgb(0 0 0 / 14%), 0 4px 8px rgb(0 0 0 / 28%);
+  font-size: 4rem;
+  /* filter: blur() grayscale(80%); */
+}
+/* 
+header:hover {
+  background: url(./img/fd-machine.jpg) center center/cover;
+  transition: all 2s ease-in-out;
+  color: brown;
+}
+
+header h1:hover {
+  color: #555;
+  transform: scaleX(1.01);
+  transition-duration: 0.7s;
+} */
+
+/* **************************************** */
+/* ---------- STORY - PARAGRAPHE ---------- */
+/* **************************************** */
+
+.wrapper {
+  margin: 160px auto;
+}
+
+.row {
+  margin-top: 20px;
+}
+
+.card-w .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 30px;
+  border-radius: 30px;
+  /* position: relative; */
+  background: transparent;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.card-w .card .card__text {
+  text-align: center;
+}
+
+/* ----------- STORY - PARAGRAPHE INSET ---------- */
+
+.card.inset {
+  box-shadow: inset 3px 3px 7px rgba(136, 165, 191, 0.48),
+    inset -3px -3px 7px #ffffff;
+}
+
+.card.inset i {
+  text-shadow: 1px 1px 1px #d6e1ef99, 0 0 0 #000, 1px 1px 1px #d6e1ef00;
+}
+
+.card.active {
+  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
+    -9px -9px 16px rgba(255, 255, 255, 0.5),
+    inset 3px 3px 7px rgba(136, 165, 191, 0.48), inset -3px -3px 7px #ffffff;
+  background: linear-gradient(
+    318.32deg,
+    rgba(163, 177, 198, 0.1) 0%,
+    rgba(163, 177, 198, 0.1) 55%,
+    rgba(163, 177, 198, 0.25) 100%
+  );
+}
+
+/* ******************************** */
+/* ---------- NAVIGATION ---------- */
+/* ******************************** */
+
+.navigation {
+  max-width: 90%;
+  margin: auto;
+  margin-top: 3.2rem;
+  margin-bottom: 3.2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  /* margin: auto; */
+  /* justify-content: space-evenly; */
+  justify-content: space-between;
+}
+
+.navigation img {
+  flex: 1; /* 1 shrink 1 grow Auto flex-basis */
+  /* width: auto;
+  height: auto; */
+  max-width: 460px;
+  max-height: 330px;
+  margin: 0.6rem;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.content img {
+  /* box-shadow: 0 0 4px rgb(0 0 0 / 14%), 0 4px 8px rgb(0 0 0 / 28%); */
+
+  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
+    -9px -9px 16px rgba(255, 255, 255, 0.5),
+    inset 3px 3px 7px rgba(136, 165, 191, 0.48), inset -3px -3px 7px #ffffff;
+  background: linear-gradient(
+    318.32deg,
+    rgba(163, 177, 198, 0.1) 0%,
+    rgba(163, 177, 198, 0.1) 55%,
+    rgba(163, 177, 198, 0.25) 100%
+  );
+
+  padding: 1rem 1rem 5rem 1rem;
+  border-radius: 50%;
+}
+.content img:hover {
+  transform: scale(1.01);
+  transition-duration: 0.5s;
+  border-radius: 0%;
+  padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+  filter: grayscale(0%);
+}
+
+/* ----------  NAVIGATION - BUTTON NEOMORPHIQUE ----------*/
+
+button {
+  background-color: #e0e5ec;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6),
+    -9px -9px 16px rgba(255, 255, 255, 0.5),
+    inset 3px 3px 7px rgba(136, 165, 191, 0.48), inset -3px -3px 7px #ffffff;
+  color: #4d3252;
+  font-weight: 500;
+  height: 96px;
+  margin-bottom: 5px;
+  margin: 10px;
+  letter-spacing: 0.3em;
+  overflow: hidden;
+  position: relative;
+  width: 96px;
+  outline: none;
+}
+
+.multi-button {
+  display: flex;
+  flex-direction: column;
+}
+
+button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(-100%);
+
+  background: rgba(255, 255, 255, 0.13);
+  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
+    -9px -9px 16px rgba(255, 255, 255, 0.5),
+    inset 3px 3px 7px rgba(136, 165, 191, 0.48), inset -3px -3px 7px #ffffff;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+}
+
+button:hover:after {
+  opacity: 1;
+  top: 0;
+  left: 0;
+  transform: translateX(0);
+  transition-property: transform, opacity;
+  transition-duration: 0.7s, 0.15s;
+  transition-timing-function: ease;
+}
+
+button:active:after {
+  opacity: 0;
+}
+
+button:hover {
+  transform: scale(1.29);
+  border-radius: 50px;
+  transition-duration: 0.4s;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 0.7rem;
+}
+
+/* ************************************ */
+/* ---------- VP-CONTENT2 ---------- */
+/* ************************************ */
+
+.vp-content2 {
+  margin: 4rem 0rem 2rem 0rem;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.9rem;
+  min-height: 100vh;
+  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
+    -9px -9px 16px rgba(255, 255, 255, 0.5),
+    inset 3px 3px 7px rgba(136, 165, 191, 0.48), inset -3px -3px 7px #ffffff;
+  /* background: url(./img/slider1.jpg) center center/cover; */
+  /* box-shadow: 0 0 4px rgb(0 0 0 / 14%), 0 4px 8px rgb(0 0 0 / 28%); */
+  font-size: 4rem;
+  border-radius: 5px;
+  background: linear-gradient(#dce2ea, white, #f5f0da);
+}
+
+/* ************************************ */
+/* ---------- GALLERIE PHOTO ---------- */
+/* ************************************ */
+
+.border {
+  border: 1px solid transparent;
+  /* border: 0.1px solid #eee; */
+  font-style: 300;
+  width: auto;
+  margin: auto;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.gallerie {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 3rem;
+}
+
+.gallerie > img {
+  flex: 1 1 auto;
+  width: auto;
+  height: auto;
+  max-width: 700px;
+  max-height: 360px;
+  object-fit: cover;
+  margin: 0.2rem 0.2rem 0.2rem 0.2rem;
+  object-position: center;
+
+  /* padding: 0.8rem 0.8rem 0.8rem 0.8rem; */
+  border-radius: 2%;
+  filter: blur() grayscale(0%);
+  box-shadow: 0 0 4px rgb(0 0 0 / 14%), 0 4px 8px rgb(0 0 0 / 28%);
+
+  /* box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
+    -9px -9px 16px rgba(255, 255, 255, 0.5),
+    inset 3px 3px 7px rgba(136, 165, 191, 0.48), inset -3px -3px 7px #ffffff; */
+}
+
+/* ---------- GALLERIE PHOTO - MODALE IMAGE ---------- */
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+  transform: scale(1.01);
+  transition-duration: 0.5s;
+}
+
+/*  CLOSING "X" DANS SPAN */
+
+/* .modal > span {
+  margin-top: 70px;
+} */
+
+/* ---------- The Modal (background) ---------- */
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 10px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width*/
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* ---------- Modal Content (image)----------- */
+
+.modal-content {
+  /* display: flex; */
+  margin: auto;
+  display: block;
+  /* width: auto; */
+  max-width: 1000px;
+  max-height: 600px;
+  border-radius: 5px;
+}
+
+/* ---------- Caption of Modal Image -----------*/
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* ---------- Add Animation ---------- */
+.modal-content,
+#caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* ---------- The Close Button ---------- */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ---------- 100% Image Width on Smaller Screens ----------- */
+
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+
+/* ********************************** */
+/* ---------- SECTION LINK ---------- */
+/* ********************************** */
+
+.container {
+  max-width: 980px;
+  max-height: 50px;
+  margin: 0 auto;
+}
+
+.icons-container {
+  margin: 0;
+  height: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.icons-container > .icon-container {
+  padding: 1em 1.2em;
+  border-radius: 0.5em;
+  transition: all 0.2s ease-in-out;
+}
+.icons-container.not-animated > .icon-container {
+  box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.6),
+    12px 12px 12px 0 rgba(0, 0, 0, 0.03);
+  transform: scale(1.05);
+}
+.icons-container.animated > .icon-container {
+  animation: raise-container 0.3s forwards 0.8s;
+}
+
+@keyframes raise-container {
+  from {
+    box-shadow: none;
+    transform: scale(1.2);
+  }
+  to {
+    box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.6),
+      12px 12px 12px 0 rgba(0, 0, 0, 0.03);
+    transform: scale(1.05);
+  }
+}
+
+.icons-container i:hover {
+  transform: scale(1.2);
+  border-radius: 50px;
+  transition-duration: 0.6s;
+  color: rgb(67, 54, 248);
+}
+
+.icons-container i {
+  color: #333;
+}
+
+/* **************************** */
+/* ---------- FOOTER ---------- */
+/* **************************** */
+
+footer {
+  min-height: 50px;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 0rem 2rem 0rem;
+  letter-spacing: 0.7rem;
+}
+
+footer h3 {
+  font-weight: 400;
+}
